@@ -1,21 +1,27 @@
 {
-  "name": "@dan4310/webui-styles",
-  "description": "Customizable css and sass styles.",
-  "private": "true",
-  "version": "0.0.1",
-  "main": "dist/index.css",
-  "files": ["dist/**/*.css", "sass/**/*.sass"],
-  "scripts": {
-    "build": "gulp",
-    "dev": "gulp dev",
-    "package": "rm -r package; gulp package"
-  },
-  "keywords": [],
-  "author": "Daniel Courtney",
-  "license": "MIT",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.56.2"
-  }
+	"name": "@dan4310/webui-styles",
+	"description": "Customizable css and sass styles.",
+	"private": "true",
+	"version": "0.0.1",
+	"main": "dist/index.css",
+	"files": [
+		"dist/**/*.css",
+		"sass/**/*.sass"
+	],
+	"scripts": {
+		"build": "gulp",
+		"dev": "gulp dev",
+		"package": "rm -r package; gulp package",
+		"lint": "prettier --check .",
+		"format": "prettier --write ."
+	},
+	"keywords": [],
+	"author": "Daniel Courtney",
+	"license": "MIT",
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-sass": "^5.1.0",
+		"prettier": "^2.8.1",
+		"sass": "^1.56.2"
+	}
 }

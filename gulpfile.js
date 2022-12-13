@@ -1,4 +1,4 @@
-const gulp = require('gulp')
+const { src, dest, watch, series } = require('gulp')
 const sass = require('gulp-sass')(require('sass'))
 
 const buildDir = './dist'
@@ -6,34 +6,31 @@ const srcDir = './sass'
 const packageDir = './package'
 
 function buildBundle(cb, outputStyle = 'compressed') {
-	gulp
-		.src(`./sass/index.scss`)
+	src(`./sass/index.scss`)
 		.pipe(
 			sass({
 				outputStyle
 			}).on('error', sass.logError)
 		)
-		.pipe(gulp.dest(buildDir))
+		.pipe(dest(buildDir))
 	cb()
 }
 
-function watch(cb) {
-	gulp.watch('sass/**/*.scss', { queue: true }, (cb) =>
-		buildBundle(cb, 'expanded')
-	)
+function dev(cb) {
+	watch('sass/**/*.scss', { queue: true }, (cb) => buildBundle(cb, 'expanded'))
 	cb()
 }
 
 function package(cb) {
-	gulp.src(buildDir + '/**/*.css').pipe(gulp.dest(packageDir + '/dist'))
-	gulp.src(srcDir + '/**/**.scss').pipe(gulp.dest(packageDir + '/sass'))
+	src(buildDir + '/**/*.css').pipe(dest(packageDir + '/dist'))
+	src(srcDir + '/**/**.scss').pipe(dest(packageDir + '/sass'))
 
-	gulp.src(['README.md', 'package.json']).pipe(gulp.dest(packageDir))
+	src(['README.md', 'package.json']).pipe(dest(packageDir))
 	cb()
 }
 
 exports.default = buildBundle
 
-exports.dev = watch
+exports.dev = dev
 
-exports.package = gulp.series([buildBundle, package])
+exports.package = series(buildBundle, package)
