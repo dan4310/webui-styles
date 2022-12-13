@@ -1,0 +1,6 @@
+@use './variables' as var;
+
+body {
+	background-color: var.$clr-bg-1;
+	color: var.$clr-txt;
+}

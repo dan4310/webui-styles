@@ -1,0 +1,29 @@
+:root {
+	--ui-clr-primary: hsla(286, 100%, 50%, 1);
+	--ui-clr-primary-light: hsla(286, 100%, 60%, 1);
+	--ui-clr-primary-dark: hsla(286, 100%, 40%, 1);
+
+	--ui-clr-secondary: hsla(230, 100%, 50%, 1);
+	--ui-clr-secondary-light: hsla(230, 100%, 60%, 1);
+	--ui-clr-secondary-dark: hsla(230, 100%, 40%, 1);
+
+	--ui-clr-bg-1: hsla(0, 0%, 100%, 1);
+	--ui-clr-bg-2: hsla(0, 0%, 80%, 1);
+	--ui-clr-bg-3: hsla(0, 0%, 60%, 1);
+
+	--ui-clr-txt: hsla(0, 0%, 10%, 1);
+	--ui-clr-txt-muted: hsla(0, 0%, 20%, 1);
+	--ui-clr-txt-h: hsla(0, 0%, 0%, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--ui-clr-bg-1: hsla(0, 0%, 0%, 1);
+		--ui-clr-bg-2: hsla(0, 0%, 20%, 1);
+		--ui-clr-bg-3: hsla(0, 0%, 40%, 1);
+
+		--ui-clr-txt: hsla(0, 0%, 90%, 1);
+		--ui-clr-txt-muted: hsla(0, 0%, 80%, 1);
+		--ui-clr-txt-h: hsla(0, 0%, 100%, 1);
+	}
+}
