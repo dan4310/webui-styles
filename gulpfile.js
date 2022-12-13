@@ -13,6 +13,9 @@ function buildBundle(cb, outputStyle = 'compressed') {
 			}).on('error', sass.logError)
 		)
 		.pipe(dest(buildDir))
+
+	src('./sass/fonts/**/**')
+		.pipe(dest(buildDir + '/fonts'))
 	cb()
 }
 
