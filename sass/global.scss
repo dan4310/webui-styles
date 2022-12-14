@@ -4,4 +4,42 @@ body {
 	background-color: var.$clr-bg-1;
 	color: var.$clr-txt;
 	padding: 0;
+	font-size: var.$fs-7;
+}
+
+a {
+	color: var.$clr-primary;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var.$clr-txt-h;
+}
+h1 {
+	font-size: var.$fs-1;
+}
+h2 {
+	font-size: var.$fs-2;
+}
+h3 {
+	font-size: var.$fs-3;
+}
+h4 {
+	font-size: var.$fs-4;
+}
+h5 {
+	font-size: var.$fs-5;
+}
+h6 {
+	font-size: var.$fs-6;
+}
+p {
+	font-size: var.$fs-7;
+}
+small {
+	font-size: var.$fs-8;
 }

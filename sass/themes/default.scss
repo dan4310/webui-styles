@@ -1,29 +1,33 @@
+@use '../variables' as var;
+
 :root {
-	--ui-clr-primary: hsla(286, 100%, 50%, 1);
-	--ui-clr-primary-light: hsla(286, 100%, 60%, 1);
-	--ui-clr-primary-dark: hsla(286, 100%, 40%, 1);
+	--ui-clr-primary: #{var.$color-primary};
+	--ui-clr-primary-t: #{rgba(var.$color-primary, 0.5)};
+	--ui-clr-primary-light: #{lighten(var.$color-primary, 10%)};
+	--ui-clr-primary-dark: #{darken(var.$color-primary, 10%)};
 
-	--ui-clr-secondary: hsla(230, 100%, 50%, 1);
-	--ui-clr-secondary-light: hsla(230, 100%, 60%, 1);
-	--ui-clr-secondary-dark: hsla(230, 100%, 40%, 1);
+	--ui-clr-secondary: #{var.$color-secondary};
+	--ui-clr-secondary-t: #{rgba(var.$color-secondary, 0.5)};
+	--ui-clr-secondary-light: #{lighten(var.$color-secondary, 10%)};
+	--ui-clr-secondary-dark: #{darken(var.$color-secondary, 10%)};
 
-	--ui-clr-bg-1: hsla(0, 0%, 100%, 1);
-	--ui-clr-bg-2: hsla(0, 0%, 80%, 1);
-	--ui-clr-bg-3: hsla(0, 0%, 60%, 1);
+	--ui-clr-bg-1: #{var.$color-bg-light};
+	--ui-clr-bg-2: #{darken(var.$color-bg-light, 10%)};
+	--ui-clr-bg-3: #{darken(var.$color-bg-light, 20%)};
 
-	--ui-clr-txt: hsla(0, 0%, 10%, 1);
-	--ui-clr-txt-muted: hsla(0, 0%, 20%, 1);
-	--ui-clr-txt-h: hsla(0, 0%, 0%, 1);
+	--ui-clr-txt: #{var.$color-txt-light};
+	--ui-clr-txt-muted: #{lighten(var.$color-txt-light, 10%)};
+	--ui-clr-txt-h: #{darken(var.$color-txt-light, 10%)};
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--ui-clr-bg-1: hsla(0, 0%, 0%, 1);
-		--ui-clr-bg-2: hsla(0, 0%, 20%, 1);
-		--ui-clr-bg-3: hsla(0, 0%, 40%, 1);
+		--ui-clr-bg-1: #{var.$color-bg-dark};
+		--ui-clr-bg-2: #{lighten(var.$color-bg-dark, 10%)};
+		--ui-clr-bg-3: #{lighten(var.$color-bg-dark, 20%)};
 
-		--ui-clr-txt: hsla(0, 0%, 90%, 1);
-		--ui-clr-txt-muted: hsla(0, 0%, 80%, 1);
-		--ui-clr-txt-h: hsla(0, 0%, 100%, 1);
+		--ui-clr-txt: #{var.$color-txt-dark};
+		--ui-clr-txt-muted: #{darken(var.$color-txt-dark, 10%)};
+		--ui-clr-txt-h: #{lighten(var.$color-txt-dark, 10%)};
 	}
 }

@@ -1,8 +1,10 @@
 $clr-primary: var(--ui-clr-primary);
+$clr-primary-t: var(--ui-clr-primary-t);
 $clr-primary-dark: var(--ui-clr-primary-dark);
 $clr-primary-light: var(--ui-clr-primary-light);
 
 $clr-secondary: var(--ui-clr-secondary);
+$clr-secondary-t: var(--ui-clr-secondary-t);
 $clr-secondary-dark: var(--ui-clr-secondary-dark);
 $clr-secondary-light: var(--ui-clr-secondary-light);
 
@@ -13,6 +15,26 @@ $clr-bg-3: var(--ui-clr-bg-3);
 $clr-txt: var(--ui-clr-txt);
 $clr-txt-muted: var(--ui-clr-txt-muted);
 $clr-txt-h: var(--ui-clr-txt-h);
+
+$fs-1: var(--ui-fs-1);
+$fs-2: var(--ui-fs-2);
+$fs-3: var(--ui-fs-3);
+$fs-4: var(--ui-fs-4);
+$fs-5: var(--ui-fs-5);
+$fs-6: var(--ui-fs-6);
+$fs-7: var(--ui-fs-7);
+$fs-8: var(--ui-fs-8);
+$fs-9: var(--ui-fs-9);
+
+$color-primary: hsla(286, 100%, 50%, 1);
+$color-secondary: hsla(230, 100%, 50%, 1);
+$color-bg-light: hsla(0, 0%, 100%, 1);
+$color-bg-dark: hsla(0, 0%, 0%, 1);
+$color-txt-light: hsla(0, 0%, 10%, 1);
+$color-txt-dark: hsla(0, 0%, 90%, 1);
+
+$font-size-base: 1rem;
+$font-size-step: 0.25;
 
 $icon-font-src: url('/fonts/webui-icons/webui-icons.woff') format('woff');
 $icon-font-name: 'webui-icons';

@@ -1,0 +1,10 @@
+@use '../variables' as var;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+}
