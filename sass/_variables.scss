@@ -13,3 +13,11 @@ $clr-bg-3: var(--ui-clr-bg-3);
 $clr-txt: var(--ui-clr-txt);
 $clr-txt-muted: var(--ui-clr-txt-muted);
 $clr-txt-h: var(--ui-clr-txt-h);
+
+$icon-font-src: url('/fonts/webui-icons/webui-icons.woff') format('woff');
+$icon-font-name: 'webui-icons';
+
+$icons: (
+    'menu': '\e900',
+    'home': '\e901'
+);

@@ -1,23 +1,20 @@
+@use './variables' as var;
+
 @font-face {
-    font-family: 'webui-icons';
-    src: url('fonts/webui-icons/webui-icons.eot?5kiojs');
-    src: url('fonts/webui-icons/webui-icons.eot?5kiojs#iefix') format('embedded-opentype'),
-    url('fonts/webui-icons/webui-icons.ttf?5kiojs') format('truetype'),
-    url('fonts/webui-icons/webui-icons.woff?5kiojs') format('woff'),
-    url('fonts/webui-icons/webui-icons.svg?5kiojs#webui-icons') format('svg');
+    font-family: var.$icon-font-name;
+    src: var.$icon-font-src;
+
     font-weight: normal;
     font-style: normal;
 }
 
 i.ui-icon {
-    font-family: 'webui-icons';
+    font-family: var.$icon-font-name;
     font-style: normal;
 }
 
-.menu:before {
-    content: "\e900";
-}
-
-.home:before {
-    content: "\e901";
+@each $name, $code in var.$icons {
+    .#{$name}:before {
+        content: $code;
+    }
 }

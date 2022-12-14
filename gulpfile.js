@@ -29,8 +29,8 @@ function devWatch(cb) {
 }
 
 function package(cb) {
-	src(buildDir + '/**/*').pipe(dest(packageDir + '/dist'))
-	src(srcDir + '/**/**').pipe(dest(packageDir + '/sass'))
+	src(buildDir + '/**/*.css').pipe(dest(packageDir + '/dist'))
+	src(srcDir + '/**/*.scss').pipe(dest(packageDir + '/sass'))
 
 	src(['README.md', 'package.json']).pipe(dest(packageDir))
 	cb()
@@ -47,10 +47,10 @@ function buildLibrary(cb) {
 	cb()
 }
 
-exports.default = series(copyFonts, buildLibrary)
+exports.default = series(buildLibrary)
 
 exports.dev = series(copyFonts, devWatch)
 
-exports.buildDev = series(copyFonts, buildBundle)
+exports.buildDev = series(buildBundle)
 
-exports.package = series(copyFonts, buildLibrary, package)
+exports.package = series(buildLibrary, package)

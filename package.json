@@ -10,7 +10,7 @@
 	],
 	"scripts": {
 		"build": "gulp",
-		"dev": "gulp dev",
+		"dev": "NODE_ENV=development gulp dev",
 		"package": "rm -r package; gulp package",
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
